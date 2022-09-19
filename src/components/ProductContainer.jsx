@@ -35,7 +35,7 @@ const ProductContainer = ({productsList}) => {
             )
         })};
 
-         {(modalOpen==true && activeProduct!=null &&<PopUp modalOpen={modalOpen} product={activeProduct}/>)}
+         
     </div>
     </>
     
