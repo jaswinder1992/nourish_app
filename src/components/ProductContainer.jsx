@@ -7,7 +7,7 @@ const ProductContainer = ({productsList}) => {
     const activeProduct = useState(null);
   return (
       <>
-      <h1 className='h1   custom-section-header'>Our Products</h1>
+      <h1 className='h1   custom-section-header'>Our Products </h1>
         <hr className='section-seperator'/>
           <div className='cards-container'>
         {productsList.map(product=>{

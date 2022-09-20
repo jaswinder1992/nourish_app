@@ -44,6 +44,7 @@ h1 {
 
 }
 
+
 .slide-active {
     flex-shrink: calc(0);
     transition-duration: 5100ms;
@@ -62,6 +63,9 @@ h1 {
     transition-duration: 5100ms;
 
 
+}
+.slide-heading{
+    font-size: 10rem;
 }
 
 .left-arrow {
@@ -96,7 +100,8 @@ h1 {
     color: green;
     max-width: 5rem;
     word-wrap: normal;
-    text-align: center;
+    text-align: center; 
+    font-size:2rem
 }
 
 .cards-container {
@@ -122,12 +127,12 @@ h1 {
 
 .custom-card:hover {
     cursor: pointer;
-    z-index: calc(3333);
+    z-index: calc(3000);
 }
 
 .custom-card-img {
-    height: 25rem;
-    width: 25rem;
+    height: 20rem;
+    width: 20rem;
     object-fit: cover;
     margin-top: 3rem;
 }
@@ -219,42 +224,100 @@ hr {
 }
 
 .popup-container {
-    min-width: 50%;
-    min-height: 50%;
+    min-width: 55%;
+    min-height: 55%;
     background-color: white;
-    z-index: 33;
+    z-index: 3000;
     display: grid;
-    justify-content: center;
-    grid-template-columns: 1fr;
-    align-items: center;
+    align-items: baseline;
+    row-gap: 2%;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 0.2fr 0.5fr auto auto;
+    
+    
     border-radius: 50px;
-    animation: fadeIn 1000ms;
+    animation: fadeIn 10000ms;
     position: relative;
+    
     
 }
 
-.popup-container>h1 {
+.popup-container h1 {
     text-align: center;
+    grid-column:1/3;
+    background-color: beige;
+    color: rgb(255, 123, 0);
+
+}
+.popup-list-title{
+    color: rgb(230, 174, 21);
+    list-style: none;
+    line-height: 1rem;
+    font-weight: bold;
 }
 
 .popup-container .btn-custom {
     position: absolute;
-    top: 5%;
+    top: 2.5%;
     right: 5%;
     cursor: pointer;
+    background-color: blueviolet;
 }
+.popup-product-img-container{
+    display: flex;
+    align-items: baseline;
+    grid-column: 1/3;
+    justify-content: center;
 
+}
+.popup-product-img-container img{
+    height: 150px;
+    width: 150px;
+    
+}
+.nutriant-li{
+    padding: 2%;
+}
+.ingredients-li::marker{
+    content: "🧁  ";
+}
+.nutriant-li::marker{
+    content: '🍪  ';
+    
+}
+.ingredients-li{
+    padding: 2%;
+}
+.popup-end-close-btn-container{
+         grid-column: 1/4;
+        justify-items: center;
+}
+.btn-close-end{
+   margin-left: 75%;
+}
 @keyframes fadeIn {
     0% {
         opacity: 0;
-        transform: translateY(-50px);
-        transform: translateZ(0px);
+        transform: translate(-500px,-500px);
         
 
     }
     100%{
         opacity: 1;
-        transform: translateY(0);
-        transform: translateZ(50px);
+        transform: translate(0,0);
+    }
+}
+@media screen and (max-width:1000px) {
+    .cards-container{
+        grid-template-columns: 1fr;
+    }
+    .custom-card{
+        flex-direction: row;
+    }
+    .slide-heading{
+        font-size: 5rem;
+    }
+    .slide-text{
+        font-size: 1rem;
     }
 }

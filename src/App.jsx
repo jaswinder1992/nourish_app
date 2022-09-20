@@ -8,11 +8,13 @@ import {imageCollection} from './imageCollection';
 import ProductContainer from './components/ProductContainer'
 import productsCoolection from './SampleProductData';
 import PopUp from './components/PopUp'
+import NewNav from './components/NewNav'
 
 function App() {
   return (
   <div className='app'>
-  <Navbar/>
+  {/* <Navbar/> */}
+  <NewNav/>
   <Slider slideCollection={imageCollection}/>
   <ProductContainer productsList={productsCoolection}/>
   {/* <PopUp/> */}

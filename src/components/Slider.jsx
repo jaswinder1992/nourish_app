@@ -43,11 +43,11 @@ const Slider = ({ slideCollection }) => {
                         alignItems:"center",
                         flexDirection:"column"
                     }} >
-                        <h1 className='text-warning' style={{fontSize:"10rem"}}>
+                        <h1 className='text-warning slide-heading' style={{}}>
                             {slide.title}
                         </h1>
                         <p className='text-white slide-text'  style={{
-                            "fontSize":"2rem",
+                           
                             "color":"white",
                             "maxWidth":"75vw"
 
