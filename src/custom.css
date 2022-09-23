@@ -307,7 +307,7 @@ hr {
         transform: translate(0,0);
     }
 }
-@media screen and (max-width:1000px) {
+@media screen and (max-width:760px) {
     .cards-container{
         grid-template-columns: 1fr;
     }
