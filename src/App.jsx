@@ -17,7 +17,7 @@ function App() {
   <NewNav/>
   <Slider slideCollection={imageCollection}/>
   <ProductContainer productsList={productsCoolection}/>
-  {/* <PopUp/> */}
+
   </div>
   )
 }
